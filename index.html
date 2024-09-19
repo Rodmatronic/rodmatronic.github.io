@@ -10,6 +10,31 @@
       width: 95%;
       margin: auto;
       padding: 20px;
+      position: relative;
+    }
+
+    .visit-count {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .visit-count {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      border-radius: 5px;
     }
 
     .grid {
@@ -22,7 +47,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 15px;
+      padding: 5px;
       border: 1px solid #ccc;
       border-radius: 10px;
       background-color: #f1f1f1;
@@ -60,6 +85,7 @@
 <body>
 
 <div class="container">
+  <div class="visit-count" id="visit-count">Visits: 0</div>
   <h2>Welcome!</h2>
   <p>This is where I put my dumb projects.</p>
 
@@ -90,6 +116,17 @@
   </div>
 
 </div>
+
+<script>
+  // JavaScript to handle visit count
+  (function() {
+    const visitCountElement = document.getElementById('visit-count');
+    let visitCount = localStorage.getItem('visitCount') || 0;
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount);
+    visitCountElement.textContent = `Visits: ${visitCount}`;
+  })();
+</script>
 
 </body>
 </html>
