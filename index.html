@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rod's lair</title>
+  <link rel="stylesheet" href="css.css">
+  <style>
+    .container {
+      width: 95%;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .widget {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+
+    .widget img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .widget-header {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .widget-description {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .widget-link a {
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .widget-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Welcome!</h2>
+  <p>This is where I put my dumb projects.</p>
+
+  <div class="grid">
+    <!-- Widget 1: CatK -->
+    <div class="widget">
+      <img src="catk.png" alt="CatKernel">
+      <div class="widget-header">CatK (catkernel)</div>
+      <div class="widget-description">A simple Unix-like kernel, built from scratch.</div>
+      <div class="widget-link"><a href="https://github.com/Rodmatronic/CatK">Source Code</a></div>
+    </div>
+
+    <!-- Widget 2: Shaded C Donut -->
+    <div class="widget">
+      <img src="donut.gif" alt="Shaded C Donut">
+      <div class="widget-header">Shaded C Donut</div>
+      <div class="widget-description">A shaded donut, based on the famous C Donut code.</div>
+      <div class="widget-link"><a href="./donut.c">Source Code</a></div>
+    </div>
+
+    <!-- Widget 3: Bits & Bops Mod Backup -->
+    <div class="widget">
+      <img src="bitsnbops.jpg" alt="Bits & Bops">
+      <div class="widget-header">Bits & Bops Mod Backup</div>
+      <div class="widget-description">(almost) every single mod for Bits & Bops, in this archive.</div>
+      <div class="widget-link"><a href="https://github.com/Rodmatronic/bits-and-bops-riqs">Backup is HERE</a></div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
