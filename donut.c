@@ -31,7 +31,7 @@ int main() {
     float A = 0, B = 0, i, j, z[1760];
     char b[1760];
 
-    printf("\x1b[?25l"); // Hide cursor
+    //printf("\x1b[?25l"); // Hide cursor
 
     while (1) {
         clock_t start = clock(); // Start the timer
