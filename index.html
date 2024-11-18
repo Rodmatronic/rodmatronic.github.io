@@ -3,32 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rod's lair</title>
+  <title>Rod's Lair</title>
   <link rel="stylesheet" href="css.css">
   <style>
     html {
+      height: 100%;
       background-image: url("space.gif");
       background-repeat: repeat;
-      color:white;
+      color: white;
       background-color: black;
     }
 
+    body {
+      margin: 0;
+      height: 900vh; /* To allow scrolling */
+    }
+
+    .parallax-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1000%;
+      background-image: url("space.gif");
+      z-index: -1;
+      transform: translateZ(0); /* Keep it crisp during parallax */
+    }
+
     .container {
+      position: relative;
       width: 95%;
       margin: auto;
       background-color: transparent;
-    }
-
-    .visit-count {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 5px 10px;
-      border-radius: 5px;
     }
 
     .visit-count {
@@ -58,7 +64,6 @@
       border-radius: 10px;
       background-color: transparent;
       text-align: center;
-      
     }
 
     .widget img {
@@ -90,69 +95,75 @@
   </style>
 </head>
 <body>
-  <marquee>Marquee? What's a marquee?</marquee>
 
-<div class="container">
+  <div class="parallax-background"></div> <!-- The parallax background layer -->
+  <marquee>Welcome!</marquee>
+  <div class="container">
+    <h6><img src="3.gif"> This is where I put my many dumb projects. I like making things in C and bash, nothing in particular, just nerdy shenanigans.<happy></happy> I also like drawing things sometimes, probably cats. <img src="hmmm5yt.gif"> <img src="cat.gif"> AND IF I am not doing that, I am probably daydreaming. <img src="icon_biggrin.gif"></h6>
+    <h5><img src="canada.gif"> Also... RAHHH CANADA! <img src="canada.gif"></h5>
+    <h5><img src="nukoElectrocuted.gif"> ...I also dabble in electronics, I have blown up a few things before. <img src="cat.gif"> Muwhahahaha</h5>
+    <center>
+    <img src="barraconstruction.gif" alt="construction"> 
+    </center>
 
-  <div class="visit-count" id="visit-count">Visits: 0</div>
-  <h2>Welcome!</h2>
-  <p>This is where I put my many dumb projects.</p>
+    <div class="grid">
+      <!-- Widget 1: CatK -->
+      <div class="widget">
+        <img src="catk.png" alt="CatKernel">
+        <div class="widget-header">CatK (catkernel)</div>
+        <div class="widget-description">A simple Unix-like kernel, built from scratch.</div>
+        <div class="widget-link"><a href="https://github.com/Rodmatronic/CatK">Source Code</a></div>
+      </div>
 
-  <center>
-  <img src="barraconstruction.gif" alt="construction"> 
-  </center>
+      <!-- Widget 2: Shaded C Donut -->
+      <div class="widget">
+        <img src="donut.gif" alt="Shaded C Donut">
+        <div class="widget-header">Shaded C Donut</div>
+        <div class="widget-description">A shaded donut, based on the famous C Donut code.</div>
+        <div class="widget-link"><a href="./donut.c">Source Code</a></div>
+      </div>
 
-  <div class="grid">
-    <!-- Widget 1: CatK -->
-    <div class="widget">
-      <img src="catk.png" alt="CatKernel">
-      <div class="widget-header">CatK (catkernel)</div>
-      <div class="widget-description">A simple Unix-like kernel, built from scratch.</div>
-      <div class="widget-link"><a href="https://github.com/Rodmatronic/CatK">Source Code</a></div>
+      <!-- Widget 3: UnHex Hex-editor -->
+      <div class="widget">
+        <img src="unhex.png" alt="UnHex">
+        <div class="widget-header">UnHex Hex-editor</div>
+        <div class="widget-description">A Unix hex editor in C</div>
+        <div class="widget-link"><a href="unhex.c">Source Code</a></div>
+      </div>
+
+      <!-- Widget 4: Bits & Bops Mod Backup -->
+      <div class="widget">
+        <img src="bitsnbops.jpg" alt="Bits & Bops">
+        <div class="widget-header">Bits & Bops Mod Backup</div>
+        <div class="widget-description">(almost) every single mod for Bits & Bops, in this archive.</div>
+        <div class="widget-link"><a href="https://github.com/Rodmatronic/bits-and-bops-riqs">Backup is HERE</a></div>
+      </div>
+
     </div>
-
-    <!-- Widget 2: Shaded C Donut -->
-    <div class="widget">
-      <img src="donut.gif" alt="Shaded C Donut">
-      <div class="widget-header">Shaded C Donut</div>
-      <div class="widget-description">A shaded donut, based on the famous C Donut code.</div>
-      <div class="widget-link"><a href="./donut.c">Source Code</a></div>
-    </div>
-
-    <!-- Widget 3: UnHex Hex-editor -->
-    <div class="widget">
-      <img src="unhex.png" alt="UnHex">
-      <div class="widget-header">UnHex Hex-editor</div>
-      <div class="widget-description">A Unix hex editor in C</div>
-      <div class="widget-link"><a href="unhex.c">Source Code</a></div>
-    </div>
-
-    <!-- Widget 4: Bits & Bops Mod Backup -->
-    <div class="widget">
-      <img src="bitsnbops.jpg" alt="Bits & Bops">
-      <div class="widget-header">Bits & Bops Mod Backup</div>
-      <div class="widget-description">(almost) every single mod for Bits & Bops, in this archive.</div>
-      <div class="widget-link"><a href="https://github.com/Rodmatronic/bits-and-bops-riqs">Backup is HERE</a></div>
-    </div>
+    <center>
+    <img src="Rainbow_Flash.gif" alt=""> 
+    </center>
 
   </div>
-  <center>
-  <img src="Rainbow_Flash.gif" alt=""> 
-  </center>
 
+  <script>
+    // JavaScript for parallax scrolling effect
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY;
+      const background = document.querySelector('.parallax-background');
+      // Adjust the background's vertical position based on scroll
+      background.style.transform = `translateY(${scrollPosition * -0.3}px)`;
+    });
 
-</div>
-
-<script>
-  // JavaScript to handle visit count
-  (function() {
-    const visitCountElement = document.getElementById('visit-count');
-    let visitCount = localStorage.getItem('visitCount') || 0;
-    visitCount++;
-    localStorage.setItem('visitCount', visitCount);
-    visitCountElement.textContent = `Visits: ${visitCount}`;
-  })();
-</script>
+    // JavaScript to handle visit count
+    (function() {
+      const visitCountElement = document.getElementById('visit-count');
+      let visitCount = localStorage.getItem('visitCount') || 0;
+      visitCount++;
+      localStorage.setItem('visitCount', visitCount);
+      visitCountElement.textContent = `Visits: ${visitCount}`;
+    })();
+  </script>
 
 </body>
 </html>
